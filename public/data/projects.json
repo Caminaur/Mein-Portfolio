@@ -1,0 +1,109 @@
+[
+  {
+    "title": "Rock, Paper, Scissors game",
+    "images": [
+      "./images/challenges/rockPaperScissors/preview-1.png",
+      "./images/challenges/rockPaperScissors/preview-2.png",
+      "./images/challenges/rockPaperScissors/preview-3.png",
+      "./images/challenges/rockPaperScissors/preview-4.png",
+      "./images/challenges/rockPaperScissors/preview-5.png"
+    ],
+    "techStack": ["HTML", "CSS", "React", "Responsive"],
+    "description": "Rock, Paper, Scissors game where users play against the computer with a responsive layout and score persistence, including a bonus Rock, Paper, Scissors, Lizard, Spock mode.",
+    "url": "https://jcaminaur-rock-paper-scissors.netlify.app/"
+  },
+  {
+    "title": "REST Countries API",
+    "techStack": ["HTML", "CSS", "React", "Responsive"],
+    "images": [
+      "./images/challenges/API%20Rest/preview-1.png",
+      "./images/challenges/API%20Rest/preview-2.png",
+      "./images/challenges/API%20Rest/preview-3.png",
+      "./images/challenges/API%20Rest/preview-4.png",
+      "./images/challenges/API%20Rest/preview-5.png",
+      "./images/challenges/API%20Rest/preview-6.png",
+      "./images/challenges/API%20Rest/preview-7.png",
+      "./images/challenges/API%20Rest/preview-8.png",
+      "./images/challenges/API%20Rest/preview-9.png",
+      "./images/challenges/API%20Rest/preview-10.png"
+    ],
+    "description": "App that integrates with the REST Countries API to list countries on the homepage and let users search by name and filter by region.",
+    "url": "https://dreamy-lamington-1efc71.netlify.app/"
+  },
+  {
+    "title": "IP Address Tracker",
+    "techStack": ["TypeScript", "React", "Tailwind"],
+    "images": ["./images/challenges/IP%20Address%20Tracker/preview-1.png"],
+    "description": "IP address tracker that automatically shows the user's own IP location and lets them search IPs or domains to view location details.",
+    "url": "https://ipaddresstracker-caminaur.netlify.app/"
+  },
+  {
+    "title": "Product list with cart",
+    "techStack": ["React", "Tailwind", "Responsive"],
+    "images": ["./images/challenges/Product%20and%20Cart/preview-1.png"],
+    "description": "Product list with a fully functional shopping cart where users can add or remove items, update quantities, and confirm their order via a modal.",
+    "url": "https://products-and-cart-caminaur.netlify.app/"
+  },
+  {
+    "title": "Loop Studios Landing Page",
+    "techStack": ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
+    "images": ["./images/challenges/Loopstudios/preview-1.png"],
+    "description": "Responsive marketing landing page for Loop Studios, built mainly with React and Tailwind to closely match the original design.",
+    "url": "https://loopstudioscaminaur.netlify.app/#"
+  },
+  {
+    "title": "Multi Step Form",
+    "techStack": ["React", "Tailwind", "Responsive"],
+    "images": ["./images/challenges/Multi-step-form/preview-1.png"],
+    "description": "Multi-step form built with React and Tailwind, with step navigation, responsive layout, and validation for user inputs.",
+    "url": "https://caminaur-multi-step-form.netlify.app/"
+  },
+  {
+    "title": "Mortgage Repayment Calculator",
+    "techStack": ["React", "Tailwind", "Responsive"],
+    "images": [
+      "./images/challenges/Mortgage-repayment-calculator/preview-1.png"
+    ],
+    "description": "Mortgage repayment calculator that takes loan details and shows monthly payments and total repayment, including validation and keyboard-friendly form.",
+    "url": "https://caminaur-mortgage-challenge.netlify.app/"
+  },
+  {
+    "title": "Contact Form",
+    "techStack": ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
+    "images": ["./images/challenges/Contact-form/preview-1.png"],
+    "description": "Accessible contact form with validation, success toast, full keyboard navigation, and a responsive layout.",
+    "url": "https://contact-form-challenge-frontendmentor.netlify.app/"
+  },
+  {
+    "title": "Space Tourism Multi-Page Website",
+    "techStack": ["HTML", "CSS", "JavaScript", "Responsive"],
+    "images": ["./images/challenges/Space-tourism-multi-page/preview-1.png"],
+    "description": "Multi-page space tourism site where users switch between sections via tabs, with responsive layouts and interactive states.",
+    "url": "https://caminaur.github.io/Space-tourism-multi-page-website/destination.html?page=destination"
+  },
+  {
+    "title": "Interactive Card Details Form",
+    "techStack": ["HTML", "CSS", "JavaScript", "Responsive"],
+    "images": ["./images/challenges/Interactive-card-details/preview-1.png"],
+    "description": "Interactive card form that updates card details in real time and validates number, expiry, and CVC with a responsive layout.",
+    "url": "https://caminaur.github.io/Interactive-card-details-form/"
+  },
+  {
+    "title": "CSS Grid",
+    "techStack": ["HTML", "CSS", "Grid", "Responsive"],
+    "images": [
+      "./images/challenges/Grid/preview-1.png",
+      "./images/challenges/Grid/preview-2.png",
+      "./images/challenges/Grid/preview-3.png"
+    ],
+    "description": "Bento-style layout challenge built with CSS Grid, focusing on matching the provided design responsively.",
+    "url": "https://caminaur-gridchallenge.netlify.app/"
+  },
+  {
+    "title": "E-commerce product page",
+    "techStack": ["HTML", "CSS", "JavaScript", "Responsive"],
+    "images": ["./images/challenges/E-commerce-product-page/preview-1.png"],
+    "description": "E-commerce product page with image gallery, lightbox, and cart where users can add, view, and remove items with a responsive layout.",
+    "url": "https://caminaur.github.io/E-commerce-product-page/"
+  }
+]
