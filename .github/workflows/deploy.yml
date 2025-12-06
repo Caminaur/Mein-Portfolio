@@ -1,0 +1,37 @@
+name: Deploy Vite Frontend to Hostinger
+
+on:
+  push:
+    branches: [main] # Se ejecuta en cada push a main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+        # Si tienes package-lock.json y quieres más rapidez, puedes usar "npm ci"
+
+      - name: Build project
+        run: npm run build
+        # Esto generará la carpeta "dist"
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ./dist # VITE → carpeta dist
+          server-dir: ${{ secrets.FTP_DIR }}
+          dangerous-clean-slate: true

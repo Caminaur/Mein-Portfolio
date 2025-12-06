@@ -7,6 +7,7 @@ export const FormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successToastOpen, setSuccessToastOpen] = useState(false);
   const [errorToastOpen, setErrorToastOpen] = useState(false);
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [form, setForm] = useState({
     company: "",
@@ -40,7 +41,7 @@ export const FormSection = () => {
       setErrors((prev) => ({ ...prev, email: "Invalid email" }));
     }
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     let newErrors = {
@@ -70,15 +71,34 @@ export const FormSection = () => {
 
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    try {
+      const res = await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        throw new Error("Request failed");
+      }
+
+      const data = await res.json();
+
+      if (data.ok) {
+        setSuccessToastOpen(true);
+        // setForm({ company: "", email: "", phone: "", message: "" });
+      } else {
+        setErrorToastOpen(true);
+      }
+    } catch (err) {
+      console.error(err);
+      setErrorToastOpen(true);
+    } finally {
       setIsSubmitting(false);
-
-      // success
-      setSuccessToastOpen(true);
-
-      //error
-      // setErrorToastOpen(true);
-    }, 3000);
+    }
   };
 
   return (
