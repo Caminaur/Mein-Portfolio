@@ -12,8 +12,8 @@ export const ProjectCard = (props) => {
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110 group-hover:brightness-30"
         />
       </div>
-      <div className="absolute inset-0 flex items-end bg-linear-to-t from-gray-900 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-90">
-        <div className="translate-y-8 transform transition-transform duration-300 group-hover:translate-y-0">
+      <div className="absolute inset-0 flex items-end bg-linear-to-t from-gray-900 to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-90 ">
+        <div className="translate-y-8 transform transition-transform duration-300 group-hover:translate-y-0 pointer-events-none lg:pointer-events-auto">
           <h3 className="text-xl font-bold text-white">{project.title}</h3>
           <p className="mt-2 text-gray-300">{project.description}</p>
           <div className="mt-4 flex space-x-2">
