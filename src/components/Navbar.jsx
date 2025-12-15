@@ -1,10 +1,17 @@
+import { useTranslation } from "react-i18next";
+import { LanguageSelector } from "./LanguageSelector";
 export const Navbar = () => {
+  const { t } = useTranslation();
   const navItems = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: t("navbar.home"), href: "#hero" },
+    { name: t("navbar.about"), href: "#about" },
+    { name: t("navbar.projects"), href: "#projects" },
+    { name: t("navbar.contact"), href: "#contact" },
   ];
+
+  const handleCloseMobileMenu = () => {
+    document.getElementById("dialog").removeAttribute("open");
+  };
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
@@ -18,7 +25,7 @@ export const Navbar = () => {
             commandfor="mobile-menu"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200 fixed right-4 top-4"
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t("navbar.openMenu")}</span>
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -36,7 +43,7 @@ export const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-12 items-center">
           {navItems.map((item) => (
             <a
               key={item.name}
@@ -46,6 +53,7 @@ export const Navbar = () => {
               {item.name}
             </a>
           ))}
+          <LanguageSelector />
         </div>
       </nav>
       <el-dialog id="dialog">
@@ -59,7 +67,7 @@ export const Navbar = () => {
                   commandfor="mobile-menu"
                   className="-m-2.5 rounded-md p-2.5 text-gray-200"
                 >
-                  <span className="sr-only">Close menu</span>
+                  <span className="sr-only">{t("navbar.closeMenu")}</span>
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -85,15 +93,12 @@ export const Navbar = () => {
                         key={item.name}
                         href={item.href}
                         className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5"
-                        onClick={() => {
-                          document
-                            .getElementById("dialog")
-                            .removeAttribute("open");
-                        }}
+                        onClick={() => handleCloseMobileMenu()}
                       >
                         {item.name}
                       </a>
                     ))}
+                    <LanguageSelector closeMenu={handleCloseMobileMenu} />
                   </div>
                 </div>
               </div>

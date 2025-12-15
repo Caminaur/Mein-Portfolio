@@ -1,0 +1,121 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "openMenu": "Open main menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "title": "Julian Caminaur Fullstack Web Developer",
+    "greetingMessage": "I’m a full-stack web developer focused on creating clean, reliable, and efficient web solutions. I enjoy bringing ideas to life with a straightforward and professional approach.",
+    "getStarted": "Get started",
+    "learnMore": "Learn more"
+  },
+  "about": {
+    "title": "About me",
+    "paragraph1": "I’m a full-stack web developer with experience in building clean, efficient, and reliable digital solutions. Over the years, I’ve worked in different environments, technical teams, customer-oriented roles, and fast-paced workplaces which helped me develop strong problem-solving skills, adaptability, and clear communication.",
+    "paragraph2": "I enjoy learning new technologies and improving my craft through personal projects, challenges, and continuous education. My focus is on writing organized code, understanding the needs behind each task, and delivering solutions that work smoothly in real-world use cases."
+  },
+  "projects": {
+    "title": "My Projects",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "allFrontendMentor": "All Frontend Mentor Projects",
+    "viewProject": "View project",
+    "rockPaperScissors": {
+      "title": "Rock, Paper, Scissors game",
+      "description": "Rock, Paper, Scissors game where users play against the computer with a responsive layout and score persistence, including a bonus Rock, Paper, Scissors, Lizard, Spock mode."
+    },
+    "restCountriesApi": {
+      "title": "REST Countries API",
+      "description": "App that integrates with the REST Countries API to list countries on the homepage and let users search by name and filter by region."
+    },
+    "ipAddressTracker": {
+      "title": "IP Address Tracker",
+      "description": "IP address tracker that automatically shows the user's own IP location and lets users search IPs or domains to view location details."
+    },
+    "productListWithCart": {
+      "title": "Product list with cart",
+      "description": "Product list with a fully functional shopping cart where users can add or remove items, update quantities, and confirm their order via a modal."
+    },
+    "chatAppCssIllustration": {
+      "title": "Chat app CSS illustration",
+      "description": "Chat app CSS illustration challenge from Frontend Mentor, built with React and Tailwind, focusing on responsive layout and UI animation."
+    },
+    "loopStudiosLandingPage": {
+      "title": "Loop Studios Landing Page",
+      "description": "Responsive marketing landing page for Loop Studios, built mainly with React and Tailwind to closely match the original design."
+    },
+    "multiStepForm": {
+      "title": "Multi Step Form",
+      "description": "Multi-step form built with React and Tailwind, with step navigation, responsive layout, and validation for user inputs."
+    },
+    "mortgageRepaymentCalculator": {
+      "title": "Mortgage Repayment Calculator",
+      "description": "Mortgage repayment calculator that takes loan details and shows monthly payments and total repayment, including validation and keyboard-friendly form."
+    },
+    "contactForm": {
+      "title": "Contact Form",
+      "description": "Accessible contact form with validation, success toast, full keyboard navigation, and a responsive layout."
+    },
+    "spaceTourismMultiPageWebsite": {
+      "title": "Space Tourism Multi-Page Website",
+      "description": "Multi-page space tourism site where users switch between sections via tabs, with responsive layouts and interactive states."
+    },
+    "interactiveCardDetailsForm": {
+      "title": "Interactive Card Details Form",
+      "description": "Interactive card form that updates card details in real time and validates number, expiry, and CVC with a responsive layout."
+    },
+    "eCommerceProductPage": {
+      "title": "E-commerce product page",
+      "description": "E-commerce product page with image gallery, lightbox, and cart where users can add, view, and remove items with a responsive layout."
+    }
+  },
+
+  "contact": {
+    "title": "Contact Form",
+    "subtitle": "Feel free to reach out and ask me anything about my work.",
+
+    "fields": {
+      "company": { "label": "Name / Company", "placeholder": "Your name" },
+      "email": { "label": "Contact Email", "placeholder": "john@duolingo.com" },
+      "phone": {
+        "label": "Phone number",
+        "placeholder": "0175 3144 1445"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Tell me briefly about your project or question"
+      }
+    },
+
+    "button": {
+      "sending": "Sending...",
+      "submit": "Let's talk"
+    },
+
+    "errors": {
+      "required": "Required field",
+      "invalidEmail": "Invalid email",
+      "invalidPhone": "Only numbers (min 6 digits)"
+    },
+
+    "toast": {
+      "success": {
+        "title": "Message received ✅",
+        "description": "Thanks for reaching out, I'll get back to you soon."
+      },
+      "error": {
+        "title": "Something went wrong ❌",
+        "description": "Please try again later."
+      }
+    },
+
+    "srOnly": {
+      "openMenu": "Open main menu",
+      "closeMenu": "Close menu"
+    }
+  }
+}

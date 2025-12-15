@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { ProjectCard } from "../components/ProjectCard";
+import { useTranslation } from "react-i18next";
 
 export const ProjectSection = ({ projects }) => {
+  const { t } = useTranslation();
+
   const [expanded, setExpanded] = useState(false);
   const [maxHeight, setMaxHeight] = useState(0);
   const extraRef = useRef(null);
@@ -28,7 +31,7 @@ export const ProjectSection = ({ projects }) => {
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 text-center">
           <h2 className="mt-2 text-4xl font-bold text-white sm:text-5xl">
-            My Projects
+            {t("projects.title")}
           </h2>
           <div className="mx-auto mt-6 h-1 w-20 bg-blue-800"></div>
         </div>
@@ -64,7 +67,7 @@ export const ProjectSection = ({ projects }) => {
                          text-base font-medium text-blue-600 transition-colors duration-300 
                          hover:bg-blue-600 hover:text-white"
             >
-              {expanded ? "Show Less" : "Show More"}
+              {expanded ? t("projects.showLess") : t("projects.showMore")}
               <span
                 className={`ml-2 inline-block transform transition-transform duration-300 ${
                   expanded ? "rotate-180" : ""
@@ -78,7 +81,7 @@ export const ProjectSection = ({ projects }) => {
                 href="https://www.frontendmentor.io/profile/Caminaur/solutions"
                 className="inline-flex items-center rounded-full border border-blue-600 px-8 py-3 text-base font-medium text-blue-600 transition-colors duration-300 hover:bg-blue-600 hover:text-white"
               >
-                All Frontend Mentor Projects
+                {t("projects.allFrontendMentor")}
                 <i className="fas fa-long-arrow-alt-right ml-3"></i>
               </a>
             </div>

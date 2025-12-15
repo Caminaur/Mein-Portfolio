@@ -1,0 +1,118 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "openMenu": "Hauptmenü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "hero": {
+    "title": "Julian Caminaur Fullstack-Webentwickler",
+    "greetingMessage": "Ich bin ein Full-Stack-Webentwickler mit Fokus auf saubere, zuverlässige und effiziente Weblösungen. Ich setze Ideen gerne mit einem klaren und professionellen Ansatz um.",
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr erfahren"
+  },
+  "about": {
+    "title": "Über mich",
+    "paragraph1": "Ich bin ein Full-Stack-Webentwickler mit Erfahrung in der Entwicklung sauberer, effizienter und zuverlässiger digitaler Lösungen. Im Laufe der Jahre habe ich in verschiedenen Umgebungen gearbeitet, in technischen Teams, kundenorientierten Rollen und schnelllebigen Arbeitsumfeldern, was mir geholfen hat, ausgeprägte Problemlösungsfähigkeiten, Anpassungsfähigkeit und eine klare Kommunikation zu entwickeln.",
+    "paragraph2": "Ich lerne gerne neue Technologien und verbessere mein Handwerk durch persönliche Projekte, Challenges und kontinuierliche Weiterbildung. Mein Fokus liegt auf gut strukturiertem Code, dem Verständnis der Anforderungen hinter jeder Aufgabe und der Entwicklung von Lösungen, die im realen Einsatz zuverlässig funktionieren."
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "showMore": "Mehr anzeigen",
+    "showLess": "Weniger anzeigen",
+    "allFrontendMentor": "Alle Frontend-Mentor-Projekte",
+    "viewProject": "Projekt ansehen",
+    "rockPaperScissors": {
+      "title": "Schere, Stein, Papier Spiel",
+      "description": "Schere, Stein, Papier Spiel, bei dem Nutzer gegen den Computer spielen, mit responsivem Layout, Punktespeicherung und einem zusätzlichen Schere, Stein, Papier, Echse, Spock Modus."
+    },
+    "restCountriesApi": {
+      "title": "REST Countries API",
+      "description": "Anwendung, die die REST Countries API integriert, um Länder auf der Startseite anzuzeigen sowie eine Suche nach Namen und eine Filterung nach Regionen zu ermöglichen."
+    },
+    "ipAddressTracker": {
+      "title": "IP-Adressen-Tracker",
+      "description": "IP-Adressen-Tracker, der automatisch den eigenen Standort anzeigt und die Suche nach IP-Adressen oder Domains zur Anzeige von Standortdetails ermöglicht."
+    },
+    "productListWithCart": {
+      "title": "Produktliste mit Warenkorb",
+      "description": "Produktliste mit voll funktionsfähigem Warenkorb, in dem Nutzer Artikel hinzufügen oder entfernen, Mengen anpassen und ihre Bestellung über ein Modal bestätigen können."
+    },
+    "chatAppCssIllustration": {
+      "title": "Chat-App CSS Illustration",
+      "description": "CSS-Illustrations-Challenge einer Chat-App von Frontend Mentor, umgesetzt mit React und Tailwind, mit Fokus auf responsives Layout und UI-Animationen."
+    },
+    "loopStudiosLandingPage": {
+      "title": "Loop Studios Landingpage",
+      "description": "Responsives Marketing-Landingpage für Loop Studios, hauptsächlich mit React und Tailwind umgesetzt, um das Originaldesign möglichst genau nachzubilden."
+    },
+    "multiStepForm": {
+      "title": "Mehrstufiges Formular",
+      "description": "Mehrstufiges Formular mit React und Tailwind, inklusive Schritt-Navigation, responsivem Layout und Validierung der Nutzereingaben."
+    },
+    "mortgageRepaymentCalculator": {
+      "title": "Hypotheken-Rückzahlungsrechner",
+      "description": "Hypotheken-Rückzahlungsrechner, der Kreditdetails verarbeitet und monatliche Raten sowie die Gesamtrückzahlung anzeigt, inklusive Validierung und tastaturfreundlichem Formular."
+    },
+    "contactForm": {
+      "title": "Kontaktformular",
+      "description": "Barrierefreies Kontaktformular mit Validierung, Erfolgsmeldung, vollständiger Tastaturnavigation und responsivem Layout."
+    },
+    "spaceTourismMultiPageWebsite": {
+      "title": "Space Tourism Multi-Page Website",
+      "description": "Mehrseitige Space-Tourism-Website, bei der Nutzer über Tabs zwischen Bereichen wechseln, mit responsiven Layouts und interaktiven Zuständen."
+    },
+    "interactiveCardDetailsForm": {
+      "title": "Interaktives Kartenformular",
+      "description": "Interaktives Formular, das Kartendaten in Echtzeit aktualisiert und Nummer, Ablaufdatum und CVC validiert, mit responsivem Layout."
+    },
+    "eCommerceProductPage": {
+      "title": "E-Commerce Produktseite",
+      "description": "E-Commerce Produktseite mit Bildergalerie, Lightbox und Warenkorb, in der Nutzer Artikel hinzufügen, ansehen und entfernen können, mit responsivem Layout."
+    }
+  },
+  "contact": {
+    "title": "Kontaktformular",
+    "subtitle": "Melde dich gerne und stelle mir Fragen zu meiner Arbeit.",
+    "fields": {
+      "company": { "label": "Name / Firma", "placeholder": "Dein Name" },
+      "email": {
+        "label": "Kontakt-E-Mail",
+        "placeholder": "john@duolingo.com"
+      },
+      "phone": {
+        "label": "Telefonnummer",
+        "placeholder": "0175 3144 1445"
+      },
+      "message": {
+        "label": "Nachricht",
+        "placeholder": "Erzähle mir kurz von deinem Projekt oder deiner Frage"
+      }
+    },
+    "button": {
+      "sending": "Wird gesendet...",
+      "submit": "Kontakt aufnehmen"
+    },
+    "errors": {
+      "required": "Pflichtfeld",
+      "invalidEmail": "Ungültige E-Mail-Adresse",
+      "invalidPhone": "Nur Zahlen (mind. 6 Stellen)"
+    },
+    "toast": {
+      "success": {
+        "title": "Nachricht erhalten ✅",
+        "description": "Danke für deine Nachricht, ich melde mich bald bei dir."
+      },
+      "error": {
+        "title": "Etwas ist schiefgelaufen ❌",
+        "description": "Bitte versuche es später erneut."
+      }
+    },
+    "srOnly": {
+      "openMenu": "Hauptmenü öffnen",
+      "closeMenu": "Menü schließen"
+    }
+  }
+}

@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const AboutMeSection = () => {
+  const { t } = useTranslation();
   return (
     <div id="about" className="relative bg-gray-900 overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -18,25 +21,12 @@ export const AboutMeSection = () => {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left">
               <h2 className="my-6 text-3xl tracking-tight font-extrabold text-white sm:text-3xl md:text-4xl">
-                About me
+                {t("about.title")}
               </h2>
 
               <div className="text-white text-lg">
-                <p>
-                  I’m a full-stack web developer with experience in building
-                  clean, efficient, and reliable digital solutions. Over the
-                  years, I’ve worked in different environments, technical teams,
-                  customer-oriented roles, and fast-paced workplaces which
-                  helped me develop strong problem-solving skills, adaptability,
-                  and clear communication.
-                </p>
-                <p>
-                  I enjoy learning new technologies and improving my craft
-                  through personal projects, challenges, and continuous
-                  education. My focus is on writing organized code,
-                  understanding the needs behind each task, and delivering
-                  solutions that work smoothly in real-world use cases.
-                </p>
+                <p>{t("about.paragraph1")}</p>
+                <p>{t("about.paragraph2")}</p>
               </div>
             </div>
           </main>

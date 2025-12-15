@@ -2,8 +2,11 @@ import { validateEmail, validatePhone } from "../lib/utils";
 import { useState } from "react";
 import * as Toast from "@radix-ui/react-toast";
 import { ToastMessage, ToastViewport } from "@/components/ToastMessage";
+import { useTranslation } from "react-i18next";
 
 export const FormSection = () => {
+  const { t } = useTranslation();
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successToastOpen, setSuccessToastOpen] = useState(false);
   const [errorToastOpen, setErrorToastOpen] = useState(false);
@@ -33,14 +36,18 @@ export const FormSection = () => {
     const value = e.target.value.trim();
 
     if (!value) {
-      setErrors((prev) => ({ ...prev, email: "Required field" }));
+      setErrors((prev) => ({ ...prev, email: t("contact.errors.required") }));
       return;
     }
 
     if (!validateEmail(value)) {
-      setErrors((prev) => ({ ...prev, email: "Invalid email" }));
+      setErrors((prev) => ({
+        ...prev,
+        email: t("contact.errors.invalidEmail"),
+      }));
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -51,17 +58,17 @@ export const FormSection = () => {
       message: "",
     };
 
-    if (!form.company.trim()) newErrors.company = "Required field";
-    if (!form.email.trim()) newErrors.email = "Required field";
-    if (!form.phone.trim()) newErrors.phone = "Required field";
-    if (!form.message.trim()) newErrors.message = "Required field";
+    if (!form.company.trim()) newErrors.company = t("contact.errors.required");
+    if (!form.email.trim()) newErrors.email = t("contact.errors.required");
+    if (!form.phone.trim()) newErrors.phone = t("contact.errors.required");
+    if (!form.message.trim()) newErrors.message = t("contact.errors.required");
 
     if (form.email && !validateEmail(form.email)) {
-      newErrors.email = "Invalid email";
+      newErrors.email = t("contact.errors.invalidEmail");
     }
 
     if (form.phone && !validatePhone(form.phone)) {
-      newErrors.phone = "Only numbers (min 6 digits)";
+      newErrors.phone = t("contact.errors.invalidPhone");
     }
 
     setErrors(newErrors);
@@ -89,7 +96,6 @@ export const FormSection = () => {
 
       if (data.ok) {
         setSuccessToastOpen(true);
-        // setForm({ company: "", email: "", phone: "", message: "" });
       } else {
         setErrorToastOpen(true);
       }
@@ -122,10 +128,10 @@ export const FormSection = () => {
 
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
-            Contact Form
+            {t("contact.title")}
           </h2>
           <p className="mt-2 text-lg/8 text-gray-400">
-            Feel free to reach out and ask me anything about my work.
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -141,7 +147,7 @@ export const FormSection = () => {
                 htmlFor="company"
                 className="block text-sm/6 font-semibold text-white"
               >
-                Name / Company
+                {t("contact.fields.company.label")}
               </label>
               <div className="mt-2.5">
                 <input
@@ -152,6 +158,7 @@ export const FormSection = () => {
                   className="form-input"
                   value={form.company}
                   onChange={handleChange}
+                  placeholder={t("contact.fields.company.placeholder")}
                 />
                 {errors.company && (
                   <p className="mt-1 text-sm text-red-500">{errors.company}</p>
@@ -164,7 +171,7 @@ export const FormSection = () => {
                 htmlFor="email"
                 className="block text-sm/6 font-semibold text-white"
               >
-                Contact Email
+                {t("contact.fields.email.label")}
               </label>
               <div className="mt-2.5">
                 <input
@@ -176,6 +183,7 @@ export const FormSection = () => {
                   value={form.email}
                   onChange={handleChange}
                   onBlur={handleEmailBlur}
+                  placeholder={t("contact.fields.email.placeholder")}
                 />
                 {errors.email && (
                   <p className="mt-1 text-sm text-red-500">{errors.email}</p>
@@ -188,7 +196,7 @@ export const FormSection = () => {
                 htmlFor="phone-number"
                 className="block text-sm/6 font-semibold text-white"
               >
-                Phone number
+                {t("contact.fields.phone.label")}
               </label>
               <div className="mt-2.5">
                 <div className="flex rounded-md bg-white/5 outline-1 -outline-offset-1 outline-white/10 has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-500">
@@ -196,7 +204,7 @@ export const FormSection = () => {
                     id="phone-number"
                     name="phone"
                     type="text"
-                    placeholder="0175 3144 1445"
+                    placeholder={t("contact.fields.phone.placeholder")}
                     className="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-3 text-base text-white placeholder:text-gray-500 focus:outline-none sm:text-sm/6"
                     value={form.phone}
                     onChange={handleChange}
@@ -213,7 +221,7 @@ export const FormSection = () => {
                 htmlFor="message"
                 className="block text-sm/6 font-semibold text-white"
               >
-                Message
+                {t("contact.fields.message.label")}
               </label>
               <div className="mt-2.5">
                 <textarea
@@ -223,6 +231,7 @@ export const FormSection = () => {
                   className="form-input"
                   value={form.message}
                   onChange={handleChange}
+                  placeholder={t("contact.fields.message.placeholder")}
                 />
                 {errors.message && (
                   <p className="mt-1 text-sm text-red-500">{errors.message}</p>
@@ -237,24 +246,27 @@ export const FormSection = () => {
               className="block w-full rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Sending..." : "Let's talk"}
+              {isSubmitting
+                ? t("contact.button.sending")
+                : t("contact.button.submit")}
             </button>
           </div>
         </form>
       </div>
+
       <ToastMessage
         open={successToastOpen}
         onOpenChange={setSuccessToastOpen}
-        title="Message received ✅"
-        description="Thanks for reaching out, I'll get back to you soon."
+        title={t("contact.toast.success.title")}
+        description={t("contact.toast.success.description")}
         variant="success"
       />
 
       <ToastMessage
         open={errorToastOpen}
         onOpenChange={setErrorToastOpen}
-        title="Something went wrong ❌"
-        description="Please try again later."
+        title={t("contact.toast.error.title")}
+        description={t("contact.toast.error.description")}
         variant="error"
       />
 

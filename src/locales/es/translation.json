@@ -1,0 +1,118 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú principal",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "title": "Julian Caminaur Desarrollador Web Fullstack",
+    "greetingMessage": "Soy un desarrollador web full-stack enfocado en crear soluciones web limpias, confiables y eficientes. Disfruto llevar ideas a la realidad con un enfoque claro y profesional.",
+    "getStarted": "Comenzar",
+    "learnMore": "Saber más"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraph1": "Soy un desarrollador web full-stack con experiencia en la creación de soluciones digitales limpias, eficientes y confiables. A lo largo de los años he trabajado en distintos entornos, equipos técnicos, roles orientados al cliente y espacios de trabajo dinámicos, lo que me permitió desarrollar sólidas habilidades de resolución de problemas, adaptabilidad y comunicación clara.",
+    "paragraph2": "Disfruto aprender nuevas tecnologías y mejorar mi oficio a través de proyectos personales, desafíos y formación continua. Mi enfoque está en escribir código organizado, comprender las necesidades detrás de cada tarea y entregar soluciones que funcionen de manera fluida en casos de uso reales."
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "showMore": "Mostrar más",
+    "showLess": "Mostrar menos",
+    "allFrontendMentor": "Todos los proyectos de Frontend Mentor",
+    "viewProject": "Ver proyecto",
+    "rockPaperScissors": {
+      "title": "Juego Piedra, Papel o Tijeras",
+      "description": "Juego de Piedra, Papel o Tijeras, con diseño responsive y persistencia de puntaje, incluyendo el modo bonus Piedra, Papel, Tijeras, Lagarto, Spock."
+    },
+    "restCountriesApi": {
+      "title": "API de REST Countries",
+      "description": "Aplicación que integra la API de REST Countries para listar países en la página principal y permitir búsquedas por nombre y filtrado por región."
+    },
+    "ipAddressTracker": {
+      "title": "Rastreador de direcciones IP",
+      "description": "Rastreador de direcciones IP que muestra automáticamente la ubicación de la IP del usuario y permite buscar IPs o dominios para ver detalles de ubicación."
+    },
+    "productListWithCart": {
+      "title": "Carrito de Compras",
+      "description": "Lista de productos con un carrito de compras donde los usuarios pueden agregar o eliminar productos, actualizar cantidades y confirmar su pedido mediante un modal."
+    },
+    "chatAppCssIllustration": {
+      "title": "Ilustración CSS de chat",
+      "description": "Desafío de ilustración CSS de una app de chat de Frontend Mentor, construido con React y Tailwind, enfocado en diseño responsive y animaciones de UI."
+    },
+    "loopStudiosLandingPage": {
+      "title": "Landing Page de Loop Studios",
+      "description": "Landing page de marketing responsive para Loop Studios, construida principalmente con React y Tailwind para replicar fielmente el diseño original."
+    },
+    "multiStepForm": {
+      "title": "Formulario de varios pasos",
+      "description": "Formulario de varios pasos construido con React y Tailwind, con navegación por pasos, diseño responsive y validación de inputs."
+    },
+    "mortgageRepaymentCalculator": {
+      "title": "Calculadora de hipoteca",
+      "description": "Calculadora de pagos hipotecarios que toma los datos del préstamo y muestra las cuotas mensuales y el total a pagar, incluyendo validación y formulario accesible por teclado."
+    },
+    "contactForm": {
+      "title": "Formulario de contacto",
+      "description": "Formulario de contacto accesible con validación, notificación de éxito, navegación completa por teclado y diseño responsive."
+    },
+    "spaceTourismMultiPageWebsite": {
+      "title": "Turismo espacial",
+      "description": "Sitio web multipágina de turismo espacial donde los usuarios cambian de sección mediante pestañas, con diseños responsivos y estados interactivos."
+    },
+    "interactiveCardDetailsForm": {
+      "title": "Formulario interactivo de tarjeta",
+      "description": "Formulario interactivo que actualiza los datos de la tarjeta en tiempo real y valida número, fecha de vencimiento y CVC, con diseño responsive."
+    },
+    "eCommerceProductPage": {
+      "title": "Página de producto e-commerce",
+      "description": "Página de producto e-commerce con galería de imágenes, lightbox y carrito, donde los usuarios pueden agregar, ver y eliminar productos con un diseño responsive."
+    }
+  },
+  "contact": {
+    "title": "Formulario de contacto",
+    "subtitle": "No dudes en escribirme y preguntarme cualquier cosa sobre mi trabajo.",
+    "fields": {
+      "company": { "label": "Nombre / Empresa", "placeholder": "Tu nombre" },
+      "email": {
+        "label": "Correo de contacto",
+        "placeholder": "john@duolingo.com"
+      },
+      "phone": {
+        "label": "Número de teléfono",
+        "placeholder": "0175 3144 1445"
+      },
+      "message": {
+        "label": "Mensaje",
+        "placeholder": "Cuéntame brevemente sobre tu proyecto o consulta"
+      }
+    },
+    "button": {
+      "sending": "Enviando...",
+      "submit": "Hablemos"
+    },
+    "errors": {
+      "required": "Campo obligatorio",
+      "invalidEmail": "Correo electrónico inválido",
+      "invalidPhone": "Solo números (mín. 6 dígitos)"
+    },
+    "toast": {
+      "success": {
+        "title": "Mensaje recibido ✅",
+        "description": "Gracias por contactarme, te responderé pronto."
+      },
+      "error": {
+        "title": "Algo salió mal ❌",
+        "description": "Por favor, inténtalo de nuevo más tarde."
+      }
+    },
+    "srOnly": {
+      "openMenu": "Abrir menú principal",
+      "closeMenu": "Cerrar menú"
+    }
+  }
+}
