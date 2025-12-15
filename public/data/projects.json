@@ -45,6 +45,13 @@
     "url": "https://products-and-cart-caminaur.netlify.app/"
   },
   {
+    "title": "Chat app CSS illustration",
+    "techStack": ["HTML", "CSS", "React", "Tailwind", "Responsive"],
+    "images": ["./images/challenges/Chat-App-Illustration/preview-1.png"],
+    "description": "Chat app CSS illustration challenge from Frontend Mentor, built with React and Tailwind, focusing on responsive layout and UI animation.",
+    "url": "https://chat-app-illustration-caminaur.netlify.app/"
+  },
+  {
     "title": "Loop Studios Landing Page",
     "techStack": ["HTML", "CSS", "JavaScript", "React", "Tailwind"],
     "images": ["./images/challenges/Loopstudios/preview-1.png"],
@@ -88,17 +95,7 @@
     "description": "Interactive card form that updates card details in real time and validates number, expiry, and CVC with a responsive layout.",
     "url": "https://caminaur.github.io/Interactive-card-details-form/"
   },
-  {
-    "title": "CSS Grid",
-    "techStack": ["HTML", "CSS", "Grid", "Responsive"],
-    "images": [
-      "./images/challenges/Grid/preview-1.png",
-      "./images/challenges/Grid/preview-2.png",
-      "./images/challenges/Grid/preview-3.png"
-    ],
-    "description": "Bento-style layout challenge built with CSS Grid, focusing on matching the provided design responsively.",
-    "url": "https://caminaur-gridchallenge.netlify.app/"
-  },
+
   {
     "title": "E-commerce product page",
     "techStack": ["HTML", "CSS", "JavaScript", "Responsive"],
