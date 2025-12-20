@@ -114,5 +114,26 @@
       "openMenu": "Hauptmenü öffnen",
       "closeMenu": "Menü schließen"
     }
+  },
+  "EngineeringHabits": "Engineering-Gewohnheiten",
+  "heatMap": {
+    "title": "Commit-Gewohnheiten nach Tag und Uhrzeit",
+    "dayOfWeek": "Wochentag",
+    "timeOfDay": "Tageszeit",
+    "timeRange": "Zeitspanne",
+    "xTitle": "",
+    "tooltip1": "Durchschnittliche Commits pro Zeitspanne: ",
+    "tooltip2": "Durchschnitt über den analysierten Zeitraum (kein Gesamtwert).",
+    "days": {
+      "mon": "Mo",
+      "tue": "Di",
+      "wed": "Mi",
+      "thu": "Do",
+      "fri": "Fr",
+      "sat": "Sa",
+      "sun": "So"
+    },
+    "updated": "Aktualisiert:",
+    "stale": "Daten veraltet"
   }
 }

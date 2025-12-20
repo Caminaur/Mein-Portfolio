@@ -5,7 +5,7 @@ export const FooterSection = () => {
         © {new Date().getFullYear()} Caminaur. All rights reserved.
       </p>
 
-      <div className="mt-4 flex justify-center space-x-6">
+      <div className="mt-4 flex justify-center space-x-6 flex-wrap px-4">
         <a
           href="https://github.com/Caminaur"
           target="_blank"

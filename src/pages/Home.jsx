@@ -4,6 +4,7 @@ import { FormSection } from "../sections/Form";
 import { ProjectSection } from "../sections/Projects";
 import { AboutMeSection } from "../sections/AboutMe";
 import { FooterSection } from "../sections/Footer";
+import { EngineeringHabits } from "../sections/Engineering-habits";
 
 export const Home = () => {
   const [projects, setProjects] = useState([]);
@@ -19,6 +20,7 @@ export const Home = () => {
       <HeroSection />
       <AboutMeSection />
       <ProjectSection projects={projects} />
+      <EngineeringHabits />
       <FormSection />
       <FooterSection />
     </div>

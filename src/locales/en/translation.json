@@ -117,5 +117,27 @@
       "openMenu": "Open main menu",
       "closeMenu": "Close menu"
     }
+  },
+  "EngineeringHabits": "Engineering Habits",
+
+  "heatMap": {
+    "title": "Commit Habits by Day and Time",
+    "dayOfWeek": "Day of week",
+    "timeOfDay": "Time of day",
+    "timeRange": "Time range",
+    "xTitle": "",
+    "tooltip1": "Average commits per time range: ",
+    "tooltip2": "Average across the analyzed period (not a total).",
+    "days": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "updated": "Updated:",
+    "stale": "Stale data"
   }
 }
