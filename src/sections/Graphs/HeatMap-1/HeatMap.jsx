@@ -1,45 +1,29 @@
 import { useEffect, useRef, useState } from "react";
 import { drawHeatmap } from "./DrawHeatMap";
-import { getData } from "./getData";
+import { getHeatMapData } from "./getData";
 import { useTranslation } from "react-i18next";
 
-export const HeatMap = () => {
+export const HeatMap = (props) => {
+  const { data, updatedLabel, stale } = props;
   const containerRef = useRef(null);
-  const [updateLabel, setupdateLabel] = useState("Unknown");
-  const [stale, setStale] = useState("Unknown");
   const { t } = useTranslation();
 
   useEffect(() => {
-    let dataCache = null;
-    let rafId = null;
+    if (!containerRef.current || !data) return;
 
-    const render = () => {
-      if (!containerRef.current || !dataCache) return;
-      drawHeatmap(containerRef.current, dataCache, t);
-    };
+    drawHeatmap(containerRef.current, data, t);
+  }, [t, data]);
 
-    const init = async () => {
-      const [data, updatedLabel, stale] = await getData(t);
-      dataCache = data;
-
-      setupdateLabel(updatedLabel);
-      setStale(stale);
-      render();
-    };
-
+  useEffect(() => {
     const onResize = () => {
-      cancelAnimationFrame(rafId);
-      rafId = requestAnimationFrame(render);
+      if (!containerRef.current || !data) return;
+
+      drawHeatmap(containerRef.current, data, t);
     };
 
-    init();
     window.addEventListener("resize", onResize);
-
-    return () => {
-      window.removeEventListener("resize", onResize);
-      cancelAnimationFrame(rafId);
-    };
-  }, [t]);
+    return () => window.removeEventListener("resize", onResize);
+  }, [t, data]);
 
   return (
     <div className="bg-gray-900 flex justify-center pb-20 overflow-x-hidden">
@@ -48,7 +32,7 @@ export const HeatMap = () => {
         <div className="px-3 w-auto">
           <div className="text-white bg-gray-400/50 p-8 rounded-md  inline-block px-3">
             <span>
-              {t("heatMap.updated")} {updateLabel}
+              {t("heatMap.updated")} {updatedLabel}
             </span>
             {stale && <span> · {t("heatMap.stale")}</span>}
           </div>

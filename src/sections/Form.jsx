@@ -10,6 +10,7 @@ export const FormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successToastOpen, setSuccessToastOpen] = useState(false);
   const [errorToastOpen, setErrorToastOpen] = useState(false);
+
   const API_URL = import.meta.env.VITE_API_URL;
 
   const [form, setForm] = useState({
@@ -88,20 +89,29 @@ export const FormSection = () => {
         body: JSON.stringify(form),
       });
 
-      if (!res.ok) {
-        throw new Error("Request failed");
-      }
-
       const data = await res.json();
 
-      if (data.ok) {
-        setSuccessToastOpen(true);
+      if (!res.ok) {
+        throw {
+          status: res.status,
+          data,
+        };
+      }
+
+      setSuccessToastOpen(true);
+    } catch (err) {
+      if (err.status === 422 && err.data?.errors) {
+        // mapear errores backend a estado errors
+        const backendErrors = {};
+
+        Object.entries(err.data.errors).forEach(([field, messages]) => {
+          backendErrors[field] = t(messages[0]);
+        });
+
+        setErrors((prev) => ({ ...prev, ...backendErrors }));
       } else {
         setErrorToastOpen(true);
       }
-    } catch (err) {
-      console.error(err);
-      setErrorToastOpen(true);
     } finally {
       setIsSubmitting(false);
     }

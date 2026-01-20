@@ -1,8 +1,11 @@
 import * as d3 from "d3";
 import { createHeatmapConfig, groupShort } from "./config";
+import { heatmapByHourRanges } from "./heatmapByHourRanges";
 
-export function drawHeatmap(container, data, t) {
+export function drawHeatmap(container, d, t) {
   d3.select(container).selectAll("*").remove();
+
+  const data = heatmapByHourRanges(d, t);
 
   const containerWidth = container.clientWidth || 320;
 
@@ -55,7 +58,7 @@ export function drawHeatmap(container, data, t) {
         // En desktop X son groups, en mobile X son vars
         if (!isMobile) return t;
         return t; // Mon/Tue...
-      })
+      }),
     );
 
   const yAxis = svg.append("g").call(
@@ -63,7 +66,7 @@ export function drawHeatmap(container, data, t) {
       // En mobile Y son groups: los acortamos
       if (isMobile) return groupShort[t] ?? t;
       return t; // Mon/Tue...
-    })
+    }),
   );
 
   xAxis
