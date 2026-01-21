@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { useTranslation } from "react-i18next";
-import { getBarChartData } from "../HeatMap-1/getData";
 import { drawBarChart } from "./drawBarChart";
 import { useWindowDimensions } from "../hooks/useWindowDimensions";
 export const BarChart = function (props) {

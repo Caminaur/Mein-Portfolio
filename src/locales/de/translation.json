@@ -117,7 +117,7 @@
   },
   "EngineeringHabits": "Engineering-Gewohnheiten",
   "heatMap": {
-    "title": "Commit-Gewohnheiten nach Tag und Uhrzeit",
+    "title": "Commit-Gewohnheiten nach █ Tag und Uhrzeit",
     "dayOfWeek": "Wochentag",
     "timeOfDay": "Tageszeit",
     "timeRange": "Zeitspanne",
@@ -135,5 +135,10 @@
     },
     "updated": "Aktualisiert:",
     "stale": "Daten veraltet"
+  },
+  "metrics": {
+    "barChart": {
+      "title": "Übersicht der █ Repository-Sprachen"
+    }
   }
 }

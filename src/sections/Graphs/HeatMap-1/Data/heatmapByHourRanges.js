@@ -1,4 +1,4 @@
-import { dayKeys } from "./config";
+import { dayKeys } from "./dayKeys";
 
 export const HOUR_BUCKETS = [
   { label: "0:00–3:00", from: 0, to: 3 },
@@ -13,7 +13,7 @@ export const HOUR_BUCKETS = [
 export function heatmapByHourRanges(values, t) {
   // day -> bucketIndex -> {sum, n}
   const acc = Array.from({ length: 7 }, () =>
-    Array.from({ length: HOUR_BUCKETS.length }, () => ({ sum: 0, n: 0 }))
+    Array.from({ length: HOUR_BUCKETS.length }, () => ({ sum: 0, n: 0 })),
   );
 
   values.forEach(({ day, hour, count }) => {
@@ -30,6 +30,6 @@ export function heatmapByHourRanges(values, t) {
       group: HOUR_BUCKETS[b].label, // eje X
       variable: dayKeys(t)[day], // eje Y
       count: cell.n ? cell.sum / cell.n : 0, // promedio dentro del rango horario
-    }))
+    })),
   );
 }

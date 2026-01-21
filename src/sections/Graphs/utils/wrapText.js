@@ -13,7 +13,7 @@ export const wrapText = (text, width) => {
     let tspan = textSel
       .text(null)
       .append("tspan")
-      .attr("x", 0)
+      .attr("x", width / 2)
       .attr("y", y)
       .attr("dy", dy + "em");
 
@@ -26,7 +26,7 @@ export const wrapText = (text, width) => {
         line = [word];
         tspan = textSel
           .append("tspan")
-          .attr("x", 0)
+          .attr("x", width / 2)
           .attr("y", y)
           .attr("dy", ++lineNumber * lineHeight + dy + "em")
           .text(word);

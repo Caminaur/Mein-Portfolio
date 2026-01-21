@@ -1,5 +1,5 @@
 export const title = (svg, w, t) => {
-  const [first, ...rest] = t("metrics.barChart.title").split("█");
+  const [first, ...rest] = t("heatMap.title").split("█");
 
   svg
     .append("text")

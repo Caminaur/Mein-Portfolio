@@ -9,7 +9,7 @@ export function useWindowDimensions() {
     } else if (w < 600 && w >= 450) {
       return { width: 400, height: 400 };
     } else {
-      return { width: 300, height: 300 };
+      return { width: 300, height: 400 };
     }
   };
 

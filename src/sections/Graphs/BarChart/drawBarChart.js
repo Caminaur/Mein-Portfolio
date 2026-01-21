@@ -28,7 +28,7 @@ export const drawBarChart = (ref, data, t, w, h) => {
   addBarsAndAnimations(svg, d3Data, height, x, colorScale, y);
 
   // Title
-  title(svg, w);
+  title(svg, width, t);
 
   // XAxis
   getXAxisGroup(svg, height, w, x);

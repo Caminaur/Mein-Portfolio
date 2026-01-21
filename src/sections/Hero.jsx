@@ -15,7 +15,7 @@ export const HeroSection = () => {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:pt-56 lg:pb-40">
           <div className="text-center">
-            <h1 className="text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
+            <h1 className="text-4xl font-semibold tracking-tight text-balance text-white sm:text-7xl">
               {t("hero.title")}
             </h1>
             <p className="mt-8 text-lg font-medium text-pretty text-gray-400 sm:text-xl/8">

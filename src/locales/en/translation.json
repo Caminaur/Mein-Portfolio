@@ -121,7 +121,7 @@
   "EngineeringHabits": "Engineering Habits",
 
   "heatMap": {
-    "title": "Commit Habits by Day and Time",
+    "title": "Commit Habits by █ Day and Time",
     "dayOfWeek": "Day of week",
     "timeOfDay": "Time of day",
     "timeRange": "Time range",
@@ -139,5 +139,10 @@
     },
     "updated": "Updated:",
     "stale": "Stale data"
+  },
+  "metrics": {
+    "barChart": {
+      "title": "Repository Languages █ Overview"
+    }
   }
 }

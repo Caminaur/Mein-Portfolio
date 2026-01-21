@@ -1,16 +1,27 @@
 export const prepareContainer = (container, w, h) => {
-  const margin = { left: 60, right: 30, top: 60, bottom: 70 };
+  const margin = { top: 65, right: 30, bottom: 65, left: 45 };
   const width = w - margin.left - margin.right;
   const height = h - margin.top - margin.bottom;
+
+  const groups = [
+    "0:00–3:00",
+    "4:00–7:00",
+    "8:00–11:00",
+    "12:00–15:00",
+    "16:00–19:00",
+    "20:00–23:00",
+  ];
+
   return {
     svg: container
       .append("svg")
       .attr("height", height + margin.top + margin.bottom)
       .attr("width", width + margin.left + margin.right)
       .append("g")
-      .attr("transform", `translate(${margin.left},${margin.top})`) // para que el grupo se coloque correctamente en la imagen. Es decir aplicamos el margen al contenido
+      .attr("transform", `translate(${margin.left},${margin.top})`)
       .attr("overflow", "hidden"),
     width: width,
     height: height,
+    groups,
   };
 };

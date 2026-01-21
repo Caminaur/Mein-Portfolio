@@ -12,7 +12,7 @@ export function LanguageSelector({ closeMenu }) {
 
   const handleLanguageSelection = (lang) => {
     i18n.changeLanguage(lang);
-    closeMenu();
+    closeMenu?.();
   };
 
   return (
