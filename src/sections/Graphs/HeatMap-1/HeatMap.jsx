@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useWindowDimensions } from "../hooks/useWindowDimensions";
 
 export const HeatMap = (props) => {
-  const { data, updatedLabel, stale } = props;
+  const { data } = props;
   const containerRef = useRef(null);
   const { t } = useTranslation();
 
@@ -23,14 +23,6 @@ export const HeatMap = (props) => {
           ref={containerRef}
           className="w-full justify-center items-center flex"
         />
-        <div className="px-3 w-auto">
-          <div className="text-white bg-gray-400/50 p-8 rounded-md  inline-block px-3">
-            <span>
-              {t("heatMap.updated")} {updatedLabel}
-            </span>
-            {stale && <span> · {t("heatMap.stale")}</span>}
-          </div>
-        </div>
       </div>
     </div>
   );

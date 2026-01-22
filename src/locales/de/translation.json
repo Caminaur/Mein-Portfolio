@@ -115,7 +115,10 @@
       "closeMenu": "Menü schließen"
     }
   },
-  "EngineeringHabits": "Engineering-Gewohnheiten",
+  "DevelopmentActivity": {
+    "title": "Deployment-Aktivität",
+    "description": "Die Grafiken basieren auf Daten aus der GitHub-API, die einmal täglich automatisch aktualisiert werden."
+  },
   "heatMap": {
     "title": "Commit-Gewohnheiten nach █ Tag und Uhrzeit",
     "dayOfWeek": "Wochentag",

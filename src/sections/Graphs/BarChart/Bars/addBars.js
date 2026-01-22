@@ -1,26 +1,18 @@
-export const addBarsAndAnimations = (svg, d3Data, height, x, colorScale, y) => {
-  svg
+export const addBars = (svg, d3Data, height, x, colorScale, y) => {
+  const bars = svg
     .selectAll(".bar")
     .data(d3Data)
     .enter()
+    // Rect
     .append("rect")
     .attr("class", "bar")
+    .attr("cursor", "pointer")
     .attr("y", height)
-
     .attr("height", (d) => height - y(d.total))
     .attr("x", (d) => x(d.language))
     .attr("width", x.bandwidth())
     .attr("fill", (d) => colorScale(d.total))
-
-    .attr("opacity", 0)
-    .transition()
-    .duration(1000)
-    .style("fill", (d) => colorScale(d.total))
-    .attr("y", (d) => y(d.total))
-    .attr("opacity", 1)
-    .delay((_, id) => {
-      return (id + 1) * 300;
-    });
+    .attr("opacity", 0);
 
   // Important for a nice animation
   svg
@@ -30,4 +22,6 @@ export const addBarsAndAnimations = (svg, d3Data, height, x, colorScale, y) => {
     .style("fill", "#101828")
     .attr("width", 900);
   // Important for a nice animation
+
+  return bars;
 };

@@ -118,8 +118,10 @@
       "closeMenu": "Close menu"
     }
   },
-  "EngineeringHabits": "Engineering Habits",
-
+  "DevelopmentActivity": {
+    "title": "Development Activity",
+    "description": "The charts are based on data obtained from the GitHub API, which is automatically refreshed once per day."
+  },
   "heatMap": {
     "title": "Commit Habits by █ Day and Time",
     "dayOfWeek": "Day of week",

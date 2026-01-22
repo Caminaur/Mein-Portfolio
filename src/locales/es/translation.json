@@ -115,7 +115,10 @@
       "closeMenu": "Cerrar menú"
     }
   },
-  "EngineeringHabits": "Hábitos de Ingeniería",
+  "DevelopmentActivity": {
+    "title": "Actividad de desarrollo",
+    "description": "Los gráficos se basan en datos obtenidos de la API de GitHub, los cuales se renuevan automáticamente una vez al día."
+  },
   "heatMap": {
     "title": "Hábitos de commits █ por día y horario",
     "dayOfWeek": "Día de la semana",
