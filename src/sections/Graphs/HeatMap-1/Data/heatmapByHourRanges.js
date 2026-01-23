@@ -1,12 +1,12 @@
 import { dayKeys } from "./dayKeys";
 
 export const HOUR_BUCKETS = [
-  { label: "0:00–3:00", from: 0, to: 3 },
-  { label: "4:00–7:00", from: 4, to: 7 },
-  { label: "8:00–11:00", from: 8, to: 11 },
-  { label: "12:00–15:00", from: 12, to: 15 },
-  { label: "16:00–19:00", from: 16, to: 19 },
-  { label: "20:00–23:00", from: 20, to: 23 },
+  { label: "0–3", from: 0, to: 3 },
+  { label: "4–7", from: 4, to: 7 },
+  { label: "8–11", from: 8, to: 11 },
+  { label: "12–15", from: 12, to: 15 },
+  { label: "16–19", from: 16, to: 19 },
+  { label: "20–23", from: 20, to: 23 },
 ];
 
 // values: [{day, hour, count}, ...]

@@ -1,16 +1,9 @@
 export const prepareContainer = (container, w, h) => {
-  const margin = { top: 65, right: 25, bottom: 65, left: 30 };
+  const margin = { top: 65, right: 15, bottom: 65, left: 35 };
   const width = w - margin.left - margin.right;
   const height = h - margin.top - margin.bottom;
 
-  const groups = [
-    "0:00–3:00",
-    "4:00–7:00",
-    "8:00–11:00",
-    "12:00–15:00",
-    "16:00–19:00",
-    "20:00–23:00",
-  ];
+  const groups = ["0–3", "4–7", "8–11", "12–15", "16–19", "20–23"];
 
   return {
     svg: container

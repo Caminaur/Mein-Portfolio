@@ -15,9 +15,7 @@ export const addCells = (
 ) =>
   cellsLayer
     .selectAll("rect.cell")
-    .data(data, (d) => {
-      return `${d.group}:${d.variable}`;
-    })
+    .data(data, (d) => `${d.group}:${d.variable}`)
     .join("rect")
     .attr("class", "cell")
     .attr("x", (d) => x(d.group))

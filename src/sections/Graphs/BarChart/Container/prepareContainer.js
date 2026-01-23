@@ -1,5 +1,5 @@
 export const prepareContainer = (container, w, h) => {
-  const margin = { left: 60, right: 30, top: 60, bottom: 70 };
+  const margin = { left: 60, right: 20, top: 60, bottom: 70 };
   const width = w - margin.left - margin.right;
   const height = h - margin.top - margin.bottom;
   return {

@@ -9,7 +9,7 @@ export const getYAxis = (svg, y) => {
     .style("fill", "white")
     .style("font-size", "14px")
     .style("font-weight", "600")
-    .attr("transform", `translate(5,-15)`)
+    .attr("transform", `translate(5,-10)`)
     .style("rotate", "-45deg");
   yAxisGroup.selectAll("path, line").style("stroke", "white");
 };

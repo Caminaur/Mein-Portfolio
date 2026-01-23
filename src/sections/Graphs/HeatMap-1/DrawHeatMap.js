@@ -8,7 +8,6 @@ import { xScale } from "./Scales/xScale";
 import { yScale } from "./Scales/yScale";
 import { addCells } from "./Cells/addCells";
 import { dayKeys } from "./Data/dayKeys";
-import { wrapText } from "../utils/wrapText";
 
 export function drawHeatmap(ref, d, t, w, h) {
   const container = select(ref);
@@ -34,7 +33,7 @@ export function drawHeatmap(ref, d, t, w, h) {
 
   const titleSpan = title(svg, width, t);
 
-  getXAxis(svg, height, x);
+  getXAxis(svg, height, x, w);
   getYAxis(svg, y);
 
   // Layers
