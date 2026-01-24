@@ -34,9 +34,6 @@ export const drawBarChart = (ref, data, t, w, h) => {
   const elementToObserve = container.node();
   observer.observe(elementToObserve);
 
-  // Hover Effect
-  // hoverAnimation(bars, x);
-
   // Title
   title(svg, width, t);
 

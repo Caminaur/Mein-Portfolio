@@ -1,17 +1,18 @@
 import { select, selectAll } from "d3";
+import { parsePercentage } from "../../utils/parsePercentage";
 
 export const barAnimation = (svg, colorScale, y, x) => {
   let isAnimating = true;
 
   svg
     .transition()
-    .duration(1000)
+    .duration(800)
     .style("fill", (d) => colorScale(d.total))
     .attr("y", (d) => y(d.total))
     .attr("opacity", 1)
     .delay((_, id) => {
       // Diferent delay on each element
-      return (id + 1) * 300;
+      return (id + 1) * 145;
     })
     .on("end", function (d, i, list) {
       // solo cuando termina la última barra
@@ -20,13 +21,6 @@ export const barAnimation = (svg, colorScale, y, x) => {
       }
     });
 
-  const parsePercentage = (number) => {
-    const num = new Intl.NumberFormat("es-ES", {
-      maximumFractionDigits: 1,
-    }).format(number);
-
-    return `${num} %`;
-  };
   svg.each(function (d) {
     select(this.parentNode)
       .append("text")

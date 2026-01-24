@@ -1,14 +1,16 @@
 import { useTranslation } from "react-i18next";
-import { HeatMap } from "./Graphs/HeatMap-1/HeatMap";
-import { BarChart } from "./Graphs/BarChart/BarChart";
+import { HeatMap } from "../components/Graphs/HeatMap-1/HeatMap";
+import { BarChart } from "../components/Graphs/BarChart/BarChart";
 import { useEffect, useState } from "react";
-import { getGraphsData } from "./Graphs/getData/getData";
+import { getGraphsData } from "../components/Graphs/getData/getData";
+import PieChart from "../components/Graphs/PieChart/PieChart";
 
 export const DevelopmentActivity = () => {
   const [updatedLabel, setupdatedLabel] = useState("Unknown");
   const [stale, setStale] = useState("Unknown");
   const [barChartData, setBarChartData] = useState(null);
   const [heatMapData, setHeatMapData] = useState(null);
+  const [chartType, setChartType] = useState("bar");
 
   const { t } = useTranslation();
 
@@ -47,7 +49,85 @@ export const DevelopmentActivity = () => {
           </div>
         </div>
         <HeatMap data={heatMapData} stale={stale} updatedLabel={updatedLabel} />
-        <BarChart data={barChartData} />
+        {/* 
+        <div className="flex items-center justify-center gap-4 text-white mb-10 text-xl">
+          <label className="flex gap-1 items-center justify-center cursor-pointer">
+            <input
+              type="radio"
+              name="chartType"
+              value="bar"
+              checked={chartType === "bar"}
+              onChange={() => setChartType("bar")}
+            />
+            Bar chart
+          </label>
+
+          <label className="flex gap-1 items-center justify-center cursor-pointer">
+            <input
+              type="radio"
+              name="chartType"
+              value="pie"
+              checked={chartType === "pie"}
+              onChange={() => setChartType("pie")}
+            />
+            Pie chart
+          </label>
+        </div> */}
+
+        <div className="flex items-center justify-center gap-4 text-white mb-10 text-xl">
+          <div className="inline-flex items-center">
+            <label
+              className="relative flex items-center cursor-pointer"
+              htmlFor="bar"
+            >
+              <input
+                name="framework"
+                type="radio"
+                className="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                id="bar"
+                checked={chartType === "bar"}
+                onChange={() => setChartType("bar")}
+              />
+              <span className="absolute bg-slate-300 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+            </label>
+            <label
+              className="ml-2 text-white cursor-pointer text-md sm:text-3xl"
+              htmlFor="bar"
+            >
+              Bar Chart
+            </label>
+          </div>
+
+          <div className="inline-flex items-center">
+            <label
+              className="relative flex items-center cursor-pointer"
+              htmlFor="react"
+            >
+              <input
+                name="framework"
+                type="radio"
+                className="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all"
+                id="react"
+                checked={chartType === "pie"}
+                onChange={() => setChartType("pie")}
+              />
+              <span className="absolute bg-slate-300 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+            </label>
+            <label
+              className="ml-2 text-white cursor-pointer text-md sm:text-3xl"
+              htmlFor="react"
+            >
+              Pie Chart
+            </label>
+          </div>
+        </div>
+        {chartType === "bar" && barChartData && (
+          <BarChart data={barChartData} />
+        )}
+
+        {chartType === "pie" && barChartData && (
+          <PieChart data={barChartData} />
+        )}
       </div>
     </section>
   );

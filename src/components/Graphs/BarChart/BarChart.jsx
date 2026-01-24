@@ -17,10 +17,8 @@ export const BarChart = function (props) {
   }, [data, width, height]);
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col gap-6">
-        <div ref={containerRef} className="" />
-      </div>
+    <div className="flex items-center flex-col">
+      <div ref={containerRef} className="" />
     </div>
   );
 };

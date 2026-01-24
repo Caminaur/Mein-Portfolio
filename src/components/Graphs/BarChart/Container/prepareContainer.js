@@ -5,8 +5,8 @@ export const prepareContainer = (container, w, h) => {
   return {
     svg: container
       .append("svg")
-      .attr("height", height + margin.top + margin.bottom)
-      .attr("width", width + margin.left + margin.right)
+      .attr("height", h)
+      .attr("width", w)
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`) // para que el grupo se coloque correctamente en la imagen. Es decir aplicamos el margen al contenido
       .attr("overflow", "hidden"),
