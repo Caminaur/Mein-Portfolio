@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { drawHeatmap } from "./DrawHeatMap";
+import { drawHeatmap } from "./drawHeatMap";
 import { useTranslation } from "react-i18next";
 import { useWindowDimensions } from "../hooks/useWindowDimensions";
 
