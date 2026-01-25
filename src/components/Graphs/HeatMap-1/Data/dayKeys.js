@@ -1,2 +1,3 @@
 export const genericDayKeys = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-export const dayKeys = (t) => genericDayKeys.map((k) => t(`heatMap.days.${k}`));
+export const dayKeys = (t) =>
+  genericDayKeys.map((k) => t(`metrics.heatMap.days.${k}`));

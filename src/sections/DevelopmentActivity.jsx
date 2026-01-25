@@ -74,7 +74,7 @@ export const DevelopmentActivity = () => {
           </label>
         </div> */}
 
-        <div className="flex items-center justify-center gap-4 text-white mb-10 text-xl">
+        <div className="flex items-center justify-center gap-4 text-white pb-10 text-xl">
           <div className="inline-flex items-center">
             <label
               className="relative flex items-center cursor-pointer"

@@ -122,27 +122,27 @@
     "title": "Development Activity",
     "description": "The charts are based on data obtained from the GitHub API, which is automatically refreshed once per day."
   },
-  "heatMap": {
-    "title": "Commit Habits by █ Day and Time",
-    "dayOfWeek": "Day of week",
-    "timeOfDay": "Time of day",
-    "timeRange": "Time range",
-    "xTitle": "",
-    "tooltip1": "Average commits per time range: ",
-    "tooltip2": "Average across the analyzed period (not a total).",
-    "days": {
-      "mon": "Mon",
-      "tue": "Tue",
-      "wed": "Wed",
-      "thu": "Thu",
-      "fri": "Fri",
-      "sat": "Sat",
-      "sun": "Sun"
-    },
-    "updated": "Updated:",
-    "stale": "Stale data"
-  },
   "metrics": {
+    "heatMap": {
+      "title": "Commit Habits by █ Day and Time",
+      "dayOfWeek": "Day of week",
+      "timeOfDay": "Time of day",
+      "timeRange": "Time range",
+      "xTitle": "",
+      "tooltip1": "Average commits per time range: ",
+      "tooltip2": "Average across the analyzed period (not a total).",
+      "days": {
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat",
+        "sun": "Sun"
+      },
+      "updated": "Updated:",
+      "stale": "Stale data"
+    },
     "barChart": {
       "title": "Repository Languages █ Overview"
     },

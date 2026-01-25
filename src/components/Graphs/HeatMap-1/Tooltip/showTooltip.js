@@ -9,8 +9,8 @@ export const showTooltip = (event, d, svg, t, width, height, tooltip) => {
   tooltip.raise();
 
   const line1 = `${d.variable} · ${d.group}`;
-  const line2 = `${t("heatMap.tooltip1")} ${d.count.toFixed(2)}`;
-  const line3 = t("heatMap.tooltip2");
+  const line2 = `${t("metrics.heatMap.tooltip1")} ${d.count.toFixed(2)}`;
+  const line3 = t("metrics.heatMap.tooltip2");
 
   t1.text(line1);
   t2.text(line2);
