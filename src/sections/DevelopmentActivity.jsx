@@ -42,37 +42,13 @@ export const DevelopmentActivity = () => {
           <div className="px-3 w-auto ">
             <div className="text-white bg-gray-400/50 p-4 rounded-md  inline-block px-3">
               <span>
-                {t("heatMap.updated")} {updatedLabel}
+                {t("metrics.heatMap.updated")} {updatedLabel}
               </span>
-              {stale && <span> · {t("heatMap.stale")}</span>}
+              {stale && <span> · {t("metrics.heatMap.stale")}</span>}
             </div>
           </div>
         </div>
         <HeatMap data={heatMapData} stale={stale} updatedLabel={updatedLabel} />
-        {/* 
-        <div className="flex items-center justify-center gap-4 text-white mb-10 text-xl">
-          <label className="flex gap-1 items-center justify-center cursor-pointer">
-            <input
-              type="radio"
-              name="chartType"
-              value="bar"
-              checked={chartType === "bar"}
-              onChange={() => setChartType("bar")}
-            />
-            Bar chart
-          </label>
-
-          <label className="flex gap-1 items-center justify-center cursor-pointer">
-            <input
-              type="radio"
-              name="chartType"
-              value="pie"
-              checked={chartType === "pie"}
-              onChange={() => setChartType("pie")}
-            />
-            Pie chart
-          </label>
-        </div> */}
 
         <div className="flex items-center justify-center gap-4 text-white pb-10 text-xl">
           <div className="inline-flex items-center">
