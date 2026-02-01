@@ -18,7 +18,7 @@ export const HeatMap = (props) => {
 
   return (
     <div className="flex justify-center py-20 overflow-x-hidden">
-      <div className="w-full max-w-[720px] flex flex-col gap-6 ">
+      <div className="max-w-[720px] flex flex-col gap-6 ">
         <div
           ref={containerRef}
           className="w-full justify-center items-center flex"

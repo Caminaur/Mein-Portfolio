@@ -4,6 +4,7 @@ import { BarChart } from "../components/Graphs/BarChart/BarChart";
 import { useEffect, useState } from "react";
 import { getGraphsData } from "../components/Graphs/getData/getData";
 import PieChart from "../components/Graphs/PieChart/PieChart";
+import Map from "../components/Graphs/Map/Map";
 
 export const DevelopmentActivity = () => {
   const [updatedLabel, setupdatedLabel] = useState("Unknown");
@@ -11,15 +12,18 @@ export const DevelopmentActivity = () => {
   const [barChartData, setBarChartData] = useState(null);
   const [heatMapData, setHeatMapData] = useState(null);
   const [chartType, setChartType] = useState("bar");
+  const [geoCountryData, setGeoCountryData] = useState("");
 
   const { t } = useTranslation();
 
   useEffect(() => {
     const init = async () => {
-      const { heatMap, barChart, updatedLabel, stale } = await getGraphsData(t);
+      const { heatMap, barChart, updatedLabel, stale, countries } =
+        await getGraphsData(t);
       setHeatMapData(heatMap);
       setBarChartData(barChart);
       setupdatedLabel(updatedLabel);
+      setGeoCountryData(countries);
       setStale(stale);
     };
 
@@ -104,6 +108,8 @@ export const DevelopmentActivity = () => {
         {chartType === "pie" && barChartData && (
           <PieChart data={barChartData} />
         )}
+
+        {/* <Map geoJson={geoCountryData} /> */}
       </div>
     </section>
   );
