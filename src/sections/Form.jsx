@@ -1,8 +1,9 @@
 import { validateEmail, validatePhone } from "../lib/utils";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import * as Toast from "@radix-ui/react-toast";
 import { ToastMessage, ToastViewport } from "@/components/ToastMessage";
 import { useTranslation } from "react-i18next";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const FormSection = () => {
   const { t } = useTranslation();
@@ -10,6 +11,10 @@ export const FormSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successToastOpen, setSuccessToastOpen] = useState(false);
   const [errorToastOpen, setErrorToastOpen] = useState(false);
+
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const captchaRef = useRef(null);
+  const [submitAttempted, setSubmitAttempted] = useState(false);
 
   const API_URL = import.meta.env.VITE_API_URL;
 
@@ -51,6 +56,7 @@ export const FormSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmitAttempted(true);
 
     let newErrors = {
       company: "",
@@ -77,6 +83,11 @@ export const FormSection = () => {
     const hasErrors = Object.values(newErrors).some((msg) => msg !== "");
     if (hasErrors) return;
 
+    if (!captchaToken) {
+      setErrorToastOpen(true);
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -86,7 +97,10 @@ export const FormSection = () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          "g-recaptcha-response": captchaToken,
+        }),
       });
 
       const data = await res.json();
@@ -99,6 +113,10 @@ export const FormSection = () => {
       }
 
       setSuccessToastOpen(true);
+      setForm({ company: "", email: "", phone: "", message: "" });
+      setCaptchaToken(null);
+      setSubmitAttempted(false);
+      captchaRef.current?.reset();
     } catch (err) {
       if (err.status === 422 && err.data?.errors) {
         // mapear errores backend a estado errors
@@ -261,6 +279,23 @@ export const FormSection = () => {
                 : t("contact.button.submit")}
             </button>
           </div>
+
+          <div className="mt-6 flex justify-center overflow-hidden">
+            <div className="scale-90 sm:scale-100 origin-center">
+              <ReCAPTCHA
+                ref={captchaRef}
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                onChange={(value) => setCaptchaToken(value)}
+                theme="dark"
+              />
+            </div>
+          </div>
+
+          {submitAttempted && !captchaToken && (
+            <p className="mt-2 text-center text-sm text-red-500">
+              {t("contact.errors.captcha")}
+            </p>
+          )}
         </form>
       </div>
 
